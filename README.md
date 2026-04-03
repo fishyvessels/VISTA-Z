@@ -39,7 +39,7 @@ The primary analysis workflows are provided as Jupyter notebooks in the Codes di
 
 ### Windows
 
-1. Install Python 3.10 from https://www.python.org/downloads/
+1. Install Python 3.10 from https://www.python.org/downloads/windows/
 	- Ensure you check "Add Python to PATH" during installation.
 2. Install Visual Studio Code from https://code.visualstudio.com/
 3. Install VS Code extensions:
@@ -49,11 +49,27 @@ The primary analysis workflows are provided as Jupyter notebooks in the Codes di
 4. Open this repository folder in VS Code.
 5. Create and activate a virtual environment:
 	- Open the VS Code terminal and run:
-	  - python -m venv .venv
+	  - py -3.10 -m venv .venv
 	  - .venv\Scripts\activate
-6. Install dependencies:
+	  - If you see an error which states: "Cannot be loaded because running scripts is disabled on this system". For more information, please visit: https:/go.microsoft.com/fwlink/?LinkID=135170
+	  - Open powershell as administrator and enter: Set-ExecutionPolicy RemoteSigned. Press A to change the execution policy.
+	  - Then enter .venv\Scripts\activate in VSCode terminal.
+6. Install git for windows https://git-scm.com/install/windows leaving all install options as their default settings.
+7. Restart terminal in VSCode and run:
+	- git --version to check git is set in PATH
+	- git clone https://github.com/fishyvessels/VISTA-Z/
+	- cd VISTA-Z (to where the codes are)
+	- git clone https://github.com/mcgarrysd/vessel_metrics.git
+	- Copy and paste both Python scripts (.py) into the VISTA-Z code folder.
+8. Install dependencies:
 	- pip install -r Codes/requirements.txt
-
+	- Ensure all packages are install correctly within the virtual environment.
+	- cd to change working directory. On Windows, ensure to change \ for /.
+	- Note: To change skeletonisation methods follow the instruction bellow:
+		- Open vessel_metrics.py on VSCode and find the skeletonize_vm(label) function.
+		- Change the first line of the function for skeletonize_vm(label, method = 'lee'):
+		- Change the second line of the function for skel = skeletonize(label, method= method)
+		
 ### macOS
 
 1. Install Python 3.10:
@@ -68,8 +84,15 @@ The primary analysis workflows are provided as Jupyter notebooks in the Codes di
 5. Create and activate a virtual environment:
 	- python3.10 -m venv .venv
 	- source .venv/bin/activate
-6. Install dependencies:
-	- pip install -r Codes/requirements.txt
+6. Install git for macOS https://git-scm.com/install/mac leaving all install options as their default settings.
+	- If required, pre-install Homebrew from https://brew.sh/ before installing git.
+7. Restart terminal in VSCode and run:
+	- git --version to check git is set in PATH
+	- git clone https://github.com/fishyvessels/VISTA-Z/
+	- cd VISTA-Z (to where the codes are)
+	- git clone https://github.com/mcgarrysd/vessel_metrics.git
+	- Copy and paste both Python scripts (.py) into the VISTA-Z code folder.
+8. Install dependencies as described in point 8 of Windows installation.
 
 ## Running the Analysis
 
