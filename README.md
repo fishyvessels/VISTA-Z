@@ -107,8 +107,8 @@ If you use this repository, please cite the following manuscripts and datasets a
 
 ### Manuscripts
 
-1. Rodriguez-Pastrana, I., Richens, J., and Wilkinson, R. N. (2026).
-	Automated analysis of zebrafish vascular networks using the VISTA-Z pipeline (preprint). https://doi.org/10.21203/rs.3.rs-8402098/v1
+1. Rodriguez-Pastrana, I., Richens, J. & Wilkinson, R.N. Automated analysis of zebrafish vascular networks using the VISTA-Z pipeline. Sci Rep (2026). 
+   https://doi.org/10.1038/s41598-026-43301-5
 
 2. McGarry, S. D., Adjekukor, C., Ahuja, S., Greysson-Wong, J., Vien, I.,
 	Rinker, K. D., and Childs, S. J. (2024).
